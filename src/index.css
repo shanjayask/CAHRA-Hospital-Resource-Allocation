@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-navy-50 text-navy-900 font-sans;
+  }
+
+  ::selection {
+    @apply bg-navy-200 text-navy-900;
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+  }
+
+  .glass-panel {
+    @apply bg-white/80 backdrop-blur-md border border-navy-100 rounded-2xl shadow-sm;
+  }
+
+  .glass-panel-dark {
+    @apply bg-navy-900/90 backdrop-blur-md border border-navy-700/50 rounded-2xl;
+  }
+
+  .section-title {
+    @apply font-display font-semibold text-navy-900 tracking-tight;
+  }
+
+  .pill {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium;
+  }
+
+  .demo-badge {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-semibold uppercase tracking-wider bg-amber-50 text-amber-700 border border-amber-200;
+  }
+
+  .live-badge {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[10px] font-semibold uppercase tracking-wider bg-emerald-50 text-emerald-700 border border-emerald-200;
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(36, 58, 106, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(36, 58, 106, 0.04) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .status-safe {
+    @apply text-emerald-600 bg-emerald-50 border-emerald-200;
+  }
+
+  .status-watch {
+    @apply text-amber-600 bg-amber-50 border-amber-200;
+  }
+
+  .status-high {
+    @apply text-orange-600 bg-orange-50 border-orange-200;
+  }
+
+  .status-critical {
+    @apply text-red-600 bg-red-50 border-red-200;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(36, 58, 106, 0.2) transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: rgba(36, 58, 106, 0.2);
+    border-radius: 3px;
+  }
+}

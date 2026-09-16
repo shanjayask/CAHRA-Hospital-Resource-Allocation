@@ -1,0 +1,8 @@
+{
+    "validation_MAE": 5.6937,
+    "validation_RMSE": 7.5599,
+    "validation_R2": 0.4924,
+    "test_MAE": 5.7882,
+    "test_RMSE": 7.6885,
+    "test_R2": -0.2828
+}
