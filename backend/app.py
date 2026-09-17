@@ -16,6 +16,7 @@ _cors_env = os.environ.get("CORS_ORIGINS", "")
 _default_origins = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
+    "https://cahra-hospital-resource-allocation.vercel.app",
 ]
 _allowed_origins = (
     [o.strip() for o in _cors_env.split(",") if o.strip()]
